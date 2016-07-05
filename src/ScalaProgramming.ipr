@@ -211,6 +211,9 @@
       </SbtProjectSettings>
     </option>
   </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+  </component>
   <component name="libraryTable">
     <library name="SBT: org.scala-lang:scala-library:2.11.8:jar">
       <CLASSES>
