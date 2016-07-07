@@ -10,7 +10,7 @@ object HorizontalBoxBlurRunner {
     Key.exec.maxWarmupRuns -> 10,
     Key.exec.benchRuns -> 10,
     Key.verbose -> true
-  ) withWarmer(new Warmer.Default)
+  ) withWarmer new Warmer.Default
 
   def main(args: Array[String]): Unit = {
     val radius = 3
