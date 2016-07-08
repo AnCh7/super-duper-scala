@@ -37,26 +37,33 @@ object HorizontalBoxBlurRunner {
 object HorizontalBoxBlur {
 
   /** Blurs the rows of the source image `src` into the destination image `dst`,
-   *  starting with `from` and ending with `end` (non-inclusive).
-   *
-   *  Within each row, `blur` traverses the pixels by going from left to right.
-   */
+    * starting with `from` and ending with `end` (non-inclusive).
+    *
+    * Within each row, `blur` traverses the pixels by going from left to right.
+    */
   def blur(src: Img, dst: Img, from: Int, end: Int, radius: Int): Unit = {
-  // TODO implement this method using the `boxBlurKernel` method
-
-  ???
+    for (x <- 0 until src.width;
+         y <- from until end
+         if y >= 0 && y < src.height) {
+      val newPixel = boxBlurKernel(src, x, y, radius)
+      dst.update(x, y, newPixel)
+    }
   }
 
   /** Blurs the rows of the source image in parallel using `numTasks` tasks.
-   *
-   *  Parallelization is done by stripping the source image `src` into
-   *  `numTasks` separate strips, where each strip is composed of some number of
-   *  rows.
-   */
+    *
+    * Parallelization is done by stripping the source image `src` into
+    * `numTasks` separate strips, where each strip is composed of some number of
+    * rows.
+    */
   def parBlur(src: Img, dst: Img, numTasks: Int, radius: Int): Unit = {
-  // TODO implement using the `task` construct and the `blur` method
-
-  ???
+    val rows: Int = Math.max(src.height / numTasks, 1)
+    val strips = Range(0, src.height, rows)
+    val tasks = strips.map(x => {
+      task {
+        blur(src, dst, x, x + rows, radius)
+      }
+    })
+    tasks.foreach(t => t.join())
   }
-
 }
