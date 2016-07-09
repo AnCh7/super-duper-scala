@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04d5fad4-3040-4a7d-b395-4daae1acbc53" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/root.iml" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parprog1-scalashop.iws" afterPath="$PROJECT_DIR$/parprog1-scalashop.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scalashop/HorizontalBoxBlur.scala" afterPath="$PROJECT_DIR$/src/main/scala/scalashop/HorizontalBoxBlur.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scalashop/VerticalBoxBlur.scala" afterPath="$PROJECT_DIR$/src/main/scala/scalashop/VerticalBoxBlur.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scalashop/package.scala" afterPath="$PROJECT_DIR$/src/main/scala/scalashop/package.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/scalashop/BlurSuite.scala" afterPath="$PROJECT_DIR$/src/test/scala/scalashop/BlurSuite.scala" />
-    </list>
+    <list default="true" id="04d5fad4-3040-4a7d-b395-4daae1acbc53" name="Default" comment="" />
     <ignored path="parprog1-scalashop.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -978,7 +971,7 @@
       <option name="presentableId" value="Default" />
       <updated>1467923553411</updated>
       <workItem from="1467923563685" duration="886000" />
-      <workItem from="1467957717061" duration="16934000" />
+      <workItem from="1467957717061" duration="17529000" />
     </task>
     <servers />
   </component>
@@ -1015,10 +1008,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17820000" />
+    <option name="totallyTimeSpent" value="18415000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1873" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1873" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
