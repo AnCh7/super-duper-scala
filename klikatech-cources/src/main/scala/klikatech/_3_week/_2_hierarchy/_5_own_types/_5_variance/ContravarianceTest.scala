@@ -1,6 +1,6 @@
-package klikatech._3_week._2_hierarchy._5_own_types._5_variance
+package klikatech._3_week._2_hierarchy._5_own_types._5_variance1
 
-//trait Animal
+trait Animal
 class Mammal extends Animal
 class Zebra extends Mammal
 
