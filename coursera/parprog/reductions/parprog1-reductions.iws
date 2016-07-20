@@ -2,6 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b582a6b1-dd0b-4a55-aa6b-783d2a57c30c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/root-build.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment.sbt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.sbt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/parprog1-reductions.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/parprog1-reductions.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/CommonBuild.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/GradingFeedback.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/ScalaTestRunner.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/Settings.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/StudentBuild.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/StudentBuildLike.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/StyleChecker.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/build.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/buildSettings.sbt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/plugins.sbt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/common/package.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/reductions/LineOfSight.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/reductions/ParallelCountChange.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/reductions/ParallelParenthesesBalancing.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/reductions/LineOfSightSuite.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/reductions/ParallelCountChangeSuite.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/reductions/ParallelParenthesesBalancingSuite.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../klikatech-cources/src/main/scala/klikatech/_3_week/_2_hierarchy/_5_own_types/_5_variance/ContravarianceTest.scala" afterPath="$PROJECT_DIR$/../../../klikatech-cources/src/main/scala/klikatech/_3_week/_2_hierarchy/_5_own_types/_5_variance/ContravarianceTest.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../klikatech-cources/src/main/scala/klikatech/_3_week/_2_hierarchy/_5_own_types/_5_variance/CovarianceTest.scala" afterPath="$PROJECT_DIR$/../../../klikatech-cources/src/main/scala/klikatech/_3_week/_2_hierarchy/_5_own_types/_5_variance/CovarianceTest.scala" />
     </list>
@@ -853,7 +876,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1468664024875</updated>
-      <workItem from="1468664030054" duration="7935000" />
+      <workItem from="1468664030054" duration="8172000" />
     </task>
     <servers />
   </component>
@@ -869,7 +892,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7935000" />
+    <option name="totallyTimeSpent" value="8172000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1873" height="1096" extended-state="6" />
