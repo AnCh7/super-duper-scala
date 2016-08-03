@@ -16,3 +16,11 @@ assert(!r1)
 
 val r2 = isNegativeString("-1", convertToInt, isNegative)
 assert(r2)
+
+
+// Нет полиморфной имплементации, функция принимает лишний параметр. Нужно переделать.
+
+def wrapper[A, B](f: A => B, g: B => B): A => B = x => g(f(x))
+val stringIncrement = wrapper((x: String) => x.toInt, (y: Int) => y + 1)
+
+stringIncrement("10")

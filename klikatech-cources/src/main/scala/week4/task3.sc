@@ -12,3 +12,11 @@ def printResult(function: => Any): Any = {
 }
 
 printResult(isNegativeString("1", convertToInt, isNegative))
+
+
+// Переделать (см. п1).
+
+def wrapper[A, B](f: A => B, g: B => Unit): A => Unit = x => g(f(x))
+val printSqrtResult = wrapper((x: Double) => math.sqrt(x), (z: Double) => println(s"result = $z"))
+
+printSqrtResult(9)
