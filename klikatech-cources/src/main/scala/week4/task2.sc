@@ -40,3 +40,42 @@ val t3 = power2(List())
 val t4 = power2(List.empty)
 val t5 = power2(Nil)
 val t6 = power2(null)
+
+// Можно было использовать withFilter + map
+
+def newPower2(list: List[Int]) = {
+  if (list != null) list.withFilter(x => x > 0).map(x => x * x)
+  else List.empty
+}
+
+// или for comprehension,
+
+def newPower2_2(list: List[Int]) =
+  if (list == null) List.empty
+  else
+    for {
+      x <- list if x > 0
+    } yield x * x
+
+// как вариант ещё Partial Function + collect.
+
+val newPower2_3 = new PartialFunction[Int, Int] {
+  def apply(x: Int) = x * x
+  def isDefinedAt(x: Int) = x > 0
+}
+
+List(1, 2, 3, 4).collect(newPower2_3)
+List(-1, 2, -33, 4, 0, 100).collect(newPower2_3)
+List().collect(newPower2_3)
+List.empty.collect(newPower2_3)
+Nil.collect(newPower2_3)
+
+val newPower2_4: PartialFunction[Int, Int] = {
+  case x: Int if x > 0 => x * x
+}
+
+List(1, 2, 3, 4).collect(newPower2_4)
+List(-1, 2, -33, 4, 0, 100).collect(newPower2_4)
+List().collect(newPower2_4)
+List.empty.collect(newPower2_4)
+Nil.collect(newPower2_4)
