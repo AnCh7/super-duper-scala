@@ -1,7 +1,5 @@
 package week3
 
-import scala.collection.immutable.::
-
 /*
    Задание:
    Класс для представления точки на плоскости. Точка характеризуется парой координат.
@@ -13,6 +11,8 @@ import scala.collection.immutable.::
    5) в какой координатной четверти лежит точка;
    6) являются ли две точки симметричными относительно начала отсчёта;
    7) являются ли три точки коллинеарными (т.е. лежащими на одной прямой).
+
+   Update - Выполнено средне. Минусы: Мутабельные поля, isSymmetrical неверно считается.
 */
 
 object Quadrant extends Enumeration {
@@ -24,22 +24,13 @@ class Point(xc: Int, yc: Int) {
 
   def this() = this(0, 0)
 
-  private var x: Int = xc
-  private var y: Int = yc
+  private val x: Int = xc
+  private val y: Int = yc
 
   def xCoordinate(): Int = x
-
   def yCoordinate(): Int = y
-
-  def move(a: Int, b: Int): Unit = {
-    x = x + a
-    y = y + b
-  }
-
-  def set(a: Int, b: Int): Unit = {
-    x = a
-    y = b
-  }
+  def move(a: Int, b: Int): Unit = new Point(x + a, y + b)
+  def set(a: Int, b: Int): Unit = new Point(a, b)
 
   def distance(that: Point): Double = {
     val a = that.x - this.x
@@ -59,9 +50,7 @@ class Point(xc: Int, yc: Int) {
     else Quadrant.Axis
   }
 
-  def isSymmetrical(that: Point): Boolean = {
-    Math.abs(this.x) == Math.abs(that.x) && Math.abs(this.y) == Math.abs(that.y)
-  }
+  def isSymmetrical(that: Point): Boolean = this.x == -that.x && this.y == -that.y
 
   def isCollinear(p2: Point, p3: Point): Boolean = {
     val s = 1 / 2 * ((x * p2.y + p2.x * p3.y + p3.x * y) - (p2.x * y + p3.x * p2.y + x * p3.y))
