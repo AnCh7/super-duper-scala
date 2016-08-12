@@ -5,6 +5,11 @@ import scala.collection.mutable
 /*
   Написать калькулятор, используя за основу свои классы I (Int) и D (Double) из предыдущего задания.
   Условие: Операции должны состоять из 2х и более операндов (чисел), например: a + b * c + x / z
+
+  Выполнено хорошо.
+  Минусы: Мутабельные коллекции.
+  Бросаются exceptions вместо Try / Either / Option.
+  Code convention: calculate_rpn.
 */
 
 object Calculator {
@@ -24,23 +29,16 @@ object Calculator {
   def isNumber(input: String): Boolean = input.forall(_.isDigit)
   def isLeftParenthesis(input: String): Boolean = input.equals("(")
   def isRightParenthesis(input: String): Boolean = input.equals(")")
-
   def fromInfixToPostfix(symbols: List[String]): List[String] = {
-
     val stack = new mutable.Stack[String]
     val queue = new mutable.Queue[String]
-
     for (symbol <- symbols) {
-
       if (isNumber(symbol)) queue += symbol
-
       if (isOperator(symbol)) {
         while (stack.nonEmpty && isOperator(stack.top)) queue += stack.pop
         stack.push(symbol)
       }
-
       if (isLeftParenthesis(symbol)) stack.push(symbol)
-
       if (isRightParenthesis(symbol)) {
         while (!isLeftParenthesis(stack.top)) queue += stack.pop
         stack.pop
@@ -55,8 +53,7 @@ object Calculator {
     queue.toList
   }
 
-  private def calculate_rpn(symbols: List[String]): Double = {
-
+  private def calculateRPN(symbols: List[String]): Option[Double] = {
     val stack = new mutable.Stack[Double]
 
     for (symbol <- symbols) {
@@ -73,22 +70,23 @@ object Calculator {
         case `division` =>
           val x = stack.pop
           stack.push(stack.pop / x)
-        case _ => throw new RuntimeException(s"Symbol $symbol is invalid operator")
+        case _ => None
       }
-
       else stack.push(symbol.toDouble)
     }
-
-    stack.pop
+    Some(stack.pop)
   }
 
-  def calculate(expression: String): Double = {
+  def calculate(expression: String): Either[String, Double] = {
     val symbols = expression.split(' ').toList
     for (s <- symbols) {
       assert(s.nonEmpty)
       assert(isOperator(s) | isNumber(s) | isLeftParenthesis(s) | isRightParenthesis(s))
     }
-    calculate_rpn(fromInfixToPostfix(symbols))
+    calculateRPN(fromInfixToPostfix(symbols)) match {
+      case Some(x) => Right(x)
+      case None => Left("Not supported operator")
+    }
   }
 }
 
@@ -96,29 +94,29 @@ object CalculatorApp extends App {
 
   var expression = "3 + 2"
   var result = Calculator.calculate(expression)
-  assert(result == 5)
+  result.fold(e => println(e), x => assert(x == 5))
   println(expression + s" = $result")
 
   expression = "5 - 2"
   result = Calculator.calculate(expression)
-  assert(result == 3)
+  result.fold(e => println(e), x => assert(x == 3))
   println(expression + s" = $result")
 
   expression = "2 * 2"
   result = Calculator.calculate(expression)
-  assert(result == 4)
+  result.fold(e => println(e), x => assert(x == 4))
   println(expression + s" = $result")
 
   expression = "9 / 3"
   result = Calculator.calculate(expression)
-  assert(result == 3)
+  result.fold(e => println(e), x => assert(x == 3))
 
   expression = "3 + ( 9 / 3 )"
   result = Calculator.calculate(expression)
-  assert(result == 6)
+  result.fold(e => println(e), x => assert(x == 6))
 
   expression = "3 + ( 2 * 5 ) + ( 2 / 2 )"
   result = Calculator.calculate(expression)
-  assert(result == 14)
+  result.fold(e => println(e), x => assert(x == 14))
   println(expression + s" = $result")
 }
