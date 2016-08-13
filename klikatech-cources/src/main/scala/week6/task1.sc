@@ -4,7 +4,9 @@
 */
 
 def minmax(values: Array[Int]): (Int, Int) = {
-  if (values.nonEmpty) (values.min, values.max)
+  if (values.nonEmpty) {
+    values.map(i => (i, i)).reduceLeft((x, y) => (math.min(x._1, y._1), math.max(x._2, y._2)))
+  }
   else (0, 0)
 }
 
