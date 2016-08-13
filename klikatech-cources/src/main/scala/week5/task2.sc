@@ -23,6 +23,8 @@
   true  false true  false
   true  true  false false
   true  true  true  true
+
+  Update - Выполнено отлично. Недочет: лишние кейсы в матчингах.
 */
 
 /*
@@ -34,8 +36,7 @@
   F	F	F
 */
 def logicalDisjunction(a: Boolean, b: Boolean): Boolean = (a, b) match {
-  case (true, true) => true
-  case (true, false) => true
+  case (true, _) => true
   case (false, true) => true
   case (false, false) => false
 }
@@ -51,8 +52,7 @@ def logicalDisjunction(a: Boolean, b: Boolean): Boolean = (a, b) match {
 def materialConditional(a: Boolean, b: Boolean): Boolean = (a, b) match {
   case (true, true) => true
   case (true, false) => false
-  case (false, true) => true
-  case (false, false) => true
+  case (false, _) => true
 }
 
 /*
@@ -78,8 +78,7 @@ def negation(a: Boolean): Boolean = a match {
 def logicalConjunction(a: Boolean, b: Boolean): Boolean = (a, b) match {
   case (true, true) => true
   case (true, false) => false
-  case (false, true) => false
-  case (false, false) => false
+  case (false, _) => false
 }
 
 /*
@@ -95,12 +94,8 @@ def logicalConjunction(a: Boolean, b: Boolean): Boolean = (a, b) match {
   T	T	T	T
 */
 def logicalConjunction(a: Boolean, b: Boolean, c: Boolean): Boolean = (a, b, c) match {
-  case (false, false, false) => false
-  case (false, false, true) => false
-  case (false, true, false) => false
-  case (false, true, true) => false
-  case (true, false, false) => false
-  case (true, false, true) => false
+  case (false, _, _) => false
+  case (true, false, _) => false
   case (true, true, false) => false
   case (true, true, true) => true
 }
