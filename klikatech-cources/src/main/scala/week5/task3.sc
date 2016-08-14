@@ -20,20 +20,29 @@ object Tree {
   def apply[A](value: A): Tree[A] = Node(value, EmptyTree, EmptyTree)
   def apply[A](value: A, left: Tree[A], right: Tree[A]): Tree[A] = Node(value, left, right)
 
-  def foreach[A](tree: Tree[A], f: (A) => Unit): Unit = {
-    //@tailrec
-    def iter[A](tree: Tree[A], f: (A) => Unit): Unit = tree match {
-      case EmptyTree =>
-      case Node(v, l, r) =>
-        iter(l, f)
-        f(v)
-        iter(r, f)
+  def foreach[A](tree: Tree[A], f: (A) => Unit): Unit = tree match {
+    case EmptyTree =>
+    case Node(v, l, r) =>
+      f(v)
+      foreach(l, f)
+      foreach(r, f)
+  }
+
+  def foreachRec[A](tree: Tree[A], f: (A) => Unit): Unit = {
+    @tailrec
+    def iter(f: (A) => Unit, todo: List[Tree[A]]): Unit = todo match {
+      case x :: tail => x match {
+        case Node(v, l, r) =>
+          f(v)
+          iter(f, l :: r :: tail)
+        case EmptyTree => iter(f, tail)
+      }
+      case Nil =>
     }
-    iter(tree, f)
+    iter(f, List(tree))
   }
 
   def reduce[A](tree: Tree[A], value: A, f: (A, A) => A): A = {
-    //@tailrec
     def loop(tree: Tree[A], value: A): A = tree match {
       case Node(v, l, r) => loop(l, f(loop(r, value), v))
       case EmptyTree => value
@@ -41,27 +50,33 @@ object Tree {
     loop(tree, value)
   }
 
-  def map[A, B](tree: Tree[A], f: A => B): Tree[B] = {
-    //@tailrec
-    def iter[A](tree: Tree[A], f: A => B): Tree[B] = tree match {
-      case Node(v, l, r) => Node(f(v), iter(l, f), iter(r, f))
-      case EmptyTree => EmptyTree
-    }
-    iter(tree, f)
+  def map[A, B](tree: Tree[A], f: A => B): Tree[B] = tree match {
+    case Node(v, l, r) => Node(f(v), map(l, f), map(r, f))
+    case EmptyTree => EmptyTree
   }
 
-  def toList[A](t: Tree[A]): List[A] = {
-    //@tailrec
-    def iter[A](t: Tree[A]): List[A] = t match {
-      case Node(v, l, r) => v :: iter(l) ::: iter(r)
-      case EmptyTree => List.empty
+  def toList[A](t: Tree[A]): List[A] = t match {
+    case Node(v, l, r) => v :: toList(l) ::: toList(r)
+    case EmptyTree => List.empty
+  }
+
+  def toListRec[A](tree: Tree[A]): List[A] = {
+    @tailrec
+    def iter(result: List[A], todo: List[Tree[A]]): List[A] = todo match {
+      case x :: tail => x match {
+        case Node(v, l, r) => iter(v :: result, l :: r :: tail)
+        case EmptyTree => iter(result, tail)
+      }
+      case Nil => result.reverse
     }
-    iter(t)
+    iter(List.empty, List(tree))
   }
 }
 
 val tree = Tree(1, Tree(2, Tree(3), Tree(4)), Tree(5, Tree(6), Tree(7)))
 Tree.foreach(tree, (x: Int) => println(x))
+Tree.foreachRec(tree, (x: Int) => println(x))
 Tree.reduce(tree, 0, (x: Int, y: Int) => x + y)
 Tree.map(tree, (x: Int) => x + 1)
 Tree.toList(tree)
+Tree.toListRec(tree)

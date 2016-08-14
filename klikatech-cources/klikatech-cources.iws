@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b5bc4ea8-1d12-4a9a-90a3-8722c83f31fe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/klikatech-cources.iws" afterPath="$PROJECT_DIR$/klikatech-cources.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/week5/task2.sc" afterPath="$PROJECT_DIR$/src/main/scala/week5/task2.sc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/week5/task4.sc" afterPath="$PROJECT_DIR$/src/main/scala/week5/task4.sc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/week5/task3_2.sc" afterPath="$PROJECT_DIR$/src/main/scala/week5/task3.sc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/week5/task3.sc" afterPath="$PROJECT_DIR$/src/main/scala/week5/task3.sc" />
     </list>
     <ignored path="klikatech-cources.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,21 +33,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="task3.sc" pinned="false" current-in-tab="true">
+      <file leaf-file-name="task3.sc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/week5/task3.sc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="60" column="1" selection-start-line="12" selection-start-column="0" selection-end-line="60" selection-end-column="1" />
+            <state relative-caret-position="264">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task1.sc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/week5/task1.sc">
+      <file leaf-file-name="task4.sc" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/week5/task4.sc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="432">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -105,6 +103,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/week6/task1.sc" />
         <option value="$PROJECT_DIR$/src/main/scala/week6/task2.sc" />
         <option value="$PROJECT_DIR$/src/main/scala/week5/task3_2.sc" />
+        <option value="$PROJECT_DIR$/src/main/scala/week5/qwe.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/week5/task3.sc" />
       </list>
     </option>
@@ -270,27 +269,7 @@
       <recent name="D:\Programming\Repositories\super-duper-scala\klikatech-cources\src\main\scala\week4" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PointApp">
-    <configuration default="false" name="CalculatorApp" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="week2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="week2.CalculatorApp" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="klikatech-cources" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.task1">
     <configuration default="false" name="RandomNoSideEffect" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -359,6 +338,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="week3.PointApp" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="klikatech-cources" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="task1" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="week5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="week5.task1" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -866,19 +865,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.CalculatorApp" />
-      <item index="1" class="java.lang.String" itemvalue="Application.RandomNoSideEffect" />
-      <item index="2" class="java.lang.String" itemvalue="Application.task1_1" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Task2App" />
-      <item index="4" class="java.lang.String" itemvalue="Application.PointApp" />
+      <item index="0" class="java.lang.String" itemvalue="Application.RandomNoSideEffect" />
+      <item index="1" class="java.lang.String" itemvalue="Application.task1_1" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Task2App" />
+      <item index="3" class="java.lang.String" itemvalue="Application.PointApp" />
+      <item index="4" class="java.lang.String" itemvalue="Application.task1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.PointApp" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Task2App" />
-        <item index="2" class="java.lang.String" itemvalue="Application.task1_1" />
-        <item index="3" class="java.lang.String" itemvalue="Application.RandomNoSideEffect" />
-        <item index="4" class="java.lang.String" itemvalue="Application.CalculatorApp" />
+        <item index="0" class="java.lang.String" itemvalue="Application.task1" />
+        <item index="1" class="java.lang.String" itemvalue="Application.PointApp" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Task2App" />
+        <item index="3" class="java.lang.String" itemvalue="Application.task1_1" />
+        <item index="4" class="java.lang.String" itemvalue="Application.RandomNoSideEffect" />
       </list>
     </recent_temporary>
   </component>
@@ -967,16 +966,16 @@
       <workItem from="1470996581573" duration="88000" />
       <workItem from="1470996691889" duration="9047000" />
       <workItem from="1471072348746" duration="1367000" />
-      <workItem from="1471073924704" duration="2237000" />
+      <workItem from="1471073924704" duration="11160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159261000" />
+    <option name="totallyTimeSpent" value="168184000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1873" height="1096" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1873" height="1096" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -992,7 +991,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1811154" sideWeight="0.5262605" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1811154" sideWeight="0.5262605" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1811154" sideWeight="0.4737395" order="5" side_tool="true" content_ui="tabs" x="573" y="337" width="466" height="455" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1035,7 +1034,7 @@
           <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="105" />
+      <option name="time" value="107" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1044,13 +1043,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/klikatech/_6_week/_2_exceptions/_2_exception_try_catch/_2_TryCatchArithmetic.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/klikatech/_6_week/_2_exceptions/_2_exception_try_catch/_3_TryCatchPatternMatching.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -1298,14 +1290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/week3/task1.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/week3/task3.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1365,14 +1349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/week5/task4.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/week5/task2.sc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2400">
@@ -1397,10 +1373,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week3/task1.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="14" column="1" selection-start-line="6" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/week5/task3.sc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="60" column="1" selection-start-line="12" selection-start-column="0" selection-end-line="60" selection-end-column="1" />
+        <state relative-caret-position="264">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week5/qwe.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week5/task4.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
         </state>
       </provider>
